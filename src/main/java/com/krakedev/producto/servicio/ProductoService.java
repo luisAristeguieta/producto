@@ -51,6 +51,7 @@ public class ProductoService {
 		if (buscado != null) {
 			buscado.setNombre(productoActualizado.getNombre());
 			buscado.setPrecio(productoActualizado.getPrecio());
+			buscado.setStock(productoActualizado.getStock());
 
 			return buscado;
 		}

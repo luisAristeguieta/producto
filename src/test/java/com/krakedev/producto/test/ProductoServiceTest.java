@@ -17,7 +17,7 @@ public class ProductoServiceTest {
 
 		// Se espera crear correctamente el producto
 		ProductoService service = new ProductoService();
-		Producto producto = new Producto("Laptop Lenovo", 1, 850.50);
+		Producto producto = new Producto("Laptop Lenovo", 1, 850.50,10);
 		Producto resultado = service.crear(producto);
 
 		assertEquals(producto, resultado);
@@ -29,8 +29,8 @@ public class ProductoServiceTest {
 		// Se espera retornar null cuando el código ya existe
 		ProductoService service = new ProductoService();
 
-		Producto producto1 = new Producto("Laptop Lenovo", 1, 850.50);
-		Producto producto2 = new Producto("Mouse Logitech", 1, 25.99);
+		Producto producto1 = new Producto("Laptop Lenovo", 1, 850.50,10);
+		Producto producto2 = new Producto("Mouse Logitech", 1, 25.99,10);
 
 		service.crear(producto1);
 		Producto resultado = service.crear(producto2);
@@ -44,7 +44,7 @@ public class ProductoServiceTest {
 		// Se espera encontrar el producto por código
 		ProductoService service = new ProductoService();
 
-		Producto producto = new Producto("Teclado Redragon", 2, 45.00);
+		Producto producto = new Producto("Teclado Redragon", 2, 45.00,10);
 
 		service.crear(producto);
 		Producto resultado = service.buscarPorCodigo(2);
@@ -69,8 +69,8 @@ public class ProductoServiceTest {
 		// Se espera listar todos los productos agregados
 		ProductoService service = new ProductoService();
 
-		Producto producto1 = new Producto("Monitor Samsung", 1, 220.00);
-		Producto producto2 = new Producto("Impresora Epson", 2, 180.00);
+		Producto producto1 = new Producto("Monitor Samsung", 1, 220.00,10);
+		Producto producto2 = new Producto("Impresora Epson", 2, 180.00,10);
 
 		service.crear(producto1);
 		service.crear(producto2);
@@ -86,11 +86,11 @@ public class ProductoServiceTest {
 		// Se espera actualizar nombre y precio del producto
 		ProductoService service = new ProductoService();
 
-		Producto producto = new Producto("Tablet Samsung", 1, 300.00);
+		Producto producto = new Producto("Tablet Samsung", 1, 300.00,10);
 
 		service.crear(producto);
 
-		Producto actualizado = new Producto("Tablet Samsung Pro", 1, 450.00);
+		Producto actualizado = new Producto("Tablet Samsung Pro", 1, 450.00,10);
 
 		Producto resultado = service.actualizar(1, actualizado);
 
@@ -104,7 +104,7 @@ public class ProductoServiceTest {
 		// Se espera eliminar correctamente el producto
 		ProductoService service = new ProductoService();
 
-		Producto producto = new Producto("Celular Xiaomi", 1, 500.00);
+		Producto producto = new Producto("Celular Xiaomi", 1, 500.00,10);
 
 		service.crear(producto);
 
