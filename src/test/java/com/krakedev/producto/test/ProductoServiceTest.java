@@ -11,6 +11,7 @@ import com.krakedev.producto.entidades.Producto;
 import com.krakedev.producto.servicio.ProductoService;
 
 public class ProductoServiceTest {
+	
 	@Test
 	public void testCrearProductoExitoso() {
 
