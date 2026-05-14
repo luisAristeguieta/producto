@@ -2,8 +2,11 @@ package com.krakedev.producto.servicio;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Service;
+
 import com.krakedev.producto.entidades.Producto;
 
+@Service
 public class ProductoService {
 	private ArrayList<Producto> productos;
 
